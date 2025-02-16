@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from tqdm import tqdm
 from src.db.hybrid_db import HybridDatabase
+from src.db.file_db import FileDB
 from src.db.config import SearchConfig
 from src.chat.chatbot import Chatbot
 from src.chat.config import ChatConfig
@@ -206,7 +207,8 @@ def run_evaluations() -> Tuple[Dict[str, List[float]], List[int], Dict[str, List
     # Create database with all features enabled
     db_config = SearchConfig()
     db = build_database(qa_pairs, db_config)
-    init_tools(db)
+    file_db = FileDB()  # won't be used in this script
+    init_tools(db, file_db)
     
     # Test different k values
     for k in tqdm(k_values, desc="Testing k values"):

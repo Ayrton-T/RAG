@@ -61,6 +61,11 @@ A framework for evaluating and comparing different RAG (Retrieval Augmented Gene
 The framework generates detailed performance visualizations comparing different RAG configurations:
 ![RAG Evaluation Results](rag_eval_results.png)
 
+Here are the results with the previous, less robust query rephrasing prompt:
+![Previous RAG Evaluation Results](rag_eval_results_prev_rephrased.png)
+
+The comparison between these two results demonstrates the impact of prompt engineering on query improvement. The newer prompt produces more focused and contextually relevant query reformulations, leading to better retrieval performance.
+
 The plot shows error rates for different search configurations:
 - Vector Search Only
 - Vector + BM25
@@ -92,7 +97,7 @@ Each configuration is evaluated with both original and LLM-improved queries acro
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd jojo-rag
+cd RAG
 ```
 
 2. Install dependencies:
@@ -101,11 +106,35 @@ pip install -r requirements.txt
 ```
 
 3. Set up environment variables:
+
+You can set environment variables either directly or using a .env file:
+
+**Option 1: Direct environment variables**
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"
 export MODEL_NAME="gpt-4o" # Default model, can be changed if needed
 export API_BASE="https://api.openai.com/v1" # or your API endpoint
 ```
+
+**Option 2: Using .env file**
+1. Create a .env file in the project root:
+```bash
+touch .env
+```
+
+2. Add your environment variables to the .env file:
+```bash
+OPENAI_API_KEY=your-openai-api-key
+MODEL_NAME=gpt-4o
+API_BASE=https://api.openai.com/v1
+```
+
+3. Install python-dotenv if not already installed:
+```bash
+pip install python-dotenv
+```
+
+The application will automatically load environment variables from the .env file when present.
 
 ## Usage
 

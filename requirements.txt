@@ -1,0 +1,36 @@
+# Core dependencies
+openai>=1.0.0
+qdrant-client>=1.7.0
+fastembed>=0.1.0
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# Machine Learning and Data Processing
+numpy>=1.21.0
+pandas>=1.3.0
+torch>=2.0.0
+sentence-transformers>=2.2.2
+tiktoken>=0.5.0
+
+# Web Tools
+duckduckgo-search>=4.1.1
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+streamlit>=1.32.0
+
+# File Processing
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+python-magic>=0.4.27
+python-magic-bin>=0.4.14; platform_system == "Windows"
+
+# Visualization and Progress
+matplotlib>=3.5.0
+seaborn>=0.11.0
+tqdm>=4.65.0
+
+# Type Checking
+typing-extensions>=4.5.0
+
+# JSON Handling
+python-json-logger>=2.0.0 

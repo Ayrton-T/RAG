@@ -244,12 +244,12 @@ def process_uploaded_file(uploaded_file):
 
 def main():
     st.set_page_config(
-        page_title="JoJo RAG Chatbot",
+        page_title="RAG Chatbot",
         page_icon="🤖",
         layout="wide"
     )
     
-    st.title("🤖 JoJo RAG Chatbot")
+    st.title("🤖 RAG Chatbot")
     st.markdown("---")
     
     # Initialize session state

@@ -135,18 +135,30 @@ The application will automatically load environment variables from the .env file
 
 ## Usage
 
-### Running Evaluations
+### Chat Application
+To launch the chat interface, run:
+
+```bash
+python main.py
+```
+Recommended: For an interactive experience, start the Streamlit app instead:
+```bash
+streamlit run app.py
+```
+Evaluating the System
+To run the evaluation suite, execute:
 
 ```bash
 python rag_eval.py
 ```
+This script performs the following steps:
 
-This will:
-1. Load QA pairs from the data directory
-2. Build databases with different configurations
-3. Run evaluations with varying k values
-4. Generate performance plots
-5. Save query improvements for analysis
+Loads QA pairs from the designated data directory.
+Constructs databases using various configurations.
+Evaluates performance over a range of k values.
+Generates performance plots.
+Saves query improvement logs for further analysis.
+
 
 ### Configuration Options
 
